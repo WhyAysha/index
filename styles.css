@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Header */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    font-size: 18px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2980b9;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #3498db;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+/* How to Participate Section */
+.how-to-participate {
+    padding: 40px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.how-to-participate h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.how-to-participate ol {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Prize Structure Section */
+.prize-structure {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.prize-structure h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.prizes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.prize {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.prize h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.prize p {
+    font-size: 20px;
+}
+
+/* Terms & Conditions Section */
+.terms-conditions {
+    padding: 40px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.terms-conditions h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.terms-conditions ul {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .contact p,
+footer .privacy p {
+    margin: 5px 0;
+}

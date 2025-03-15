@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize Bond Scheme - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Centering the form */
+        .login-container {
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .password-container {
+            position: relative;
+        }
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login / Sign Up</h2>
+
+        <input type="text" id="phone" placeholder="Enter 11-digit Phone Number" maxlength="11">
+        <p id="phoneError" class="error"></p>
+
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Enter Password">
+            <i class="fa fa-eye eye-icon" onclick="togglePassword('password')"></i>
+        </div>
+
+        <div class="password-container">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <i class="fa fa-eye eye-icon" onclick="togglePassword('confirmPassword')"></i>
+        </div>
+
+        <p id="passwordError" class="error"></p>
+
+        <button onclick="validateLogin()">Sign Up / Login</button>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var phoneError = document.getElementById("phoneError");
+            var passwordError = document.getElementById("passwordError");
+
+            phoneError.textContent = "";
+            passwordError.textContent = "";
+
+            // Validate phone number (must be 11 digits)
+            if (!/^\d{11}$/.test(phone)) {
+                phoneError.textContent = "Phone number must be exactly 11 digits.";
+                return;
+            }
+
+            // Validate password
+            if (password.length < 6) {
+                passwordError.textContent = "Password must be at least 6 characters.";
+                return;
+            }
+
+            // Check password confirmation
+            if (password !== confirmPassword) {
+                passwordError.textContent = "Passwords do not match.";
+                return;
+            }
+
+            // Redirect to main page after successful login
+            alert("Login Successful!");
+            window.location.href = "index2.html"; // Redirect to main page
+        }
+
+        function togglePassword(id) {
+            var input = document.getElementById(id);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
